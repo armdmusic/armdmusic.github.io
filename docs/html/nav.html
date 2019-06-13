@@ -39,8 +39,10 @@
   #menu-button.open:hover hr:last-child {transform: translateY(-12px)}
   /* Close */
   #menu-button.close hr {transform: translateY(-34px)}
-  #menu-button.close hr:first-child {transform: rotate(60deg) translateY(8px) translateX(20px)}
-  #menu-button.close hr:last-child {transform:  rotate(300deg) translateY(-8px)translateX(20px)}
+  #menu-button.close hr:first-child {transform: translateY(12px) translateX(0px) rotate(-45deg)}
+  #menu-button.close hr:last-child {transform: translateY(-12px)translateX(2px) rotate(45deg)}
+  #menu-button.close:hover hr:first-child {transform: translateY(12px) translateX(0px) rotate(-60deg)}
+  #menu-button.close:hover hr:last-child {transform: translateY(-12px)translateX(2px) rotate(60deg)}
   nav hr {
     border: none;
     height: 4px;
@@ -49,24 +51,61 @@
     border-radius: 2px;
     transition: 0.3s;
   }
+  nav li:last-child.open {
+    background-color: #fff
+  }
+  nav li:last-child.close {
+    border-left: 1px solid #683dff;
+    background-color: #683dff
+  }
+  nav li:last-child.close #menu-button hr {
+    background-color: #fff
+  }
   #sidenav {
     position: fixed;
     width: 100%;
     height: 100vh;
     right: -100%;
     transition: 0.3s;
-    background-color: #683dff
+    background-image: url("/images/waves/purple_waves_down.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #683dff;
+    opacity: 0
   }
   #sidenav.open {
-    right: 0
+    right: 0;
+    opacity: 1
+  }
+  #sidenav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 12px
+  }
+  #sidenav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }
+  #sidenav li {
+    border-right: none;
+    border-left: none
+  }
+  #sidenav li:nth-child(even) {
+    background-color: #8764ff
   }
 </style>
 <ul>
   <li style="border-right:1px solid #f5f5f5;border-left:none"><a href="/"><img src="/images/armd_logo.min.jpg" width="48px" height="48px"></a></li>
   <canvas height="64px" style="display:block;flex-grow:1;height:64px;min-width:0"></canvas>
-  <li style="z-index:1;background-color:#fff"><div id="menu-button" class="open" style="width:48px;cursor:pointer" onclick="toggleNav()"><hr><hr><hr></div></li>
+  <li style="z-index:1"><div id="menu-button" class="open" style="width:48px;cursor:pointer" onclick="toggleNav()"><hr><hr><hr></div></li>
 </ul>
 <div id="sidenav" class="close">
   <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="javascript:void(0)">COMING SOON</a></li>
   </ul>
 </div>

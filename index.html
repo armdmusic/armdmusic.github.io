@@ -41,27 +41,36 @@
       justify-content: space-around;
     }
     .social-media-card {
+      display: flex;
       position: relative;
-      border-radius: 4px;
-      padding: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      flex-direction: column;
       width: 40%;
+      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      border-radius: 8px;
+      padding: 8px;
+      background-color: #fff
     }
     .social-media-card h1 {
       text-align: center;
+      margin: 8%
     }
     .social-media-card hr {
       border: none;
       height: 1px;
-      background-color: #ccc
+      background-color: #ccc;
+      width: 100%
     }
     .social-media-card img {
       display: block;
+      position: absolute;
       width: 25%;
       border-radius: 50%;
-      position: absolute;
-      top: calc(-50% + 8px);
-      box-shadow: 0 1px 3px rgba(0,0,0,.25)
+      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      transform: translateY(-25%) translateX(-25%);
+      transition: 0.3s
+    }
+    .social-media-card img:hover {
+      transform: translateY(-25%) translateX(-25%) rotate(360deg)
     }
   </style>
 </head>

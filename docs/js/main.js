@@ -12,8 +12,10 @@ function toggleNav() {
   if (jQuery("#sidenav").hasClass("close")) {
     jQuery("#sidenav").attr("class", "open");
     jQuery("#menu-button").attr("class", "close");
+    jQuery("nav li:last-child").attr("class", "close");
   } else {
     jQuery("#sidenav").attr("class", "close");
     jQuery("#menu-button").attr("class", "open");
+    jQuery("nav li:last-child").attr("class", "open");
   }
 }
