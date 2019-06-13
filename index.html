@@ -1,0 +1,105 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARMD</title>
+  <script type="text/javascript" src="/docs/js/jquery.js" defer></script>
+  <script type="text/javascript" src="/docs/js/main.js" defer></script>
+  <link type="text/css" rel="stylesheet" href="/docs/css/turtle.css">
+  <style>
+    body {
+      background-color: #fff
+    }
+    .banner {
+      position: relative;
+      width: 100%
+    }
+    .banner .txt {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      text-align: center
+    }
+    .banner img {
+      display: block;
+      width: 100%
+    }
+    .social-media-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .social-media-card {
+      position: relative;
+      border-radius: 4px;
+      padding: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      width: 40%;
+    }
+    .social-media-card h1 {
+      text-align: center;
+    }
+    .social-media-card hr {
+      border: none;
+      height: 1px;
+      background-color: #ccc
+    }
+    .social-media-card img {
+      display: block;
+      width: 25%;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(-50% + 8px);
+      box-shadow: 0 1px 3px rgba(0,0,0,.25)
+    }
+  </style>
+</head>
+<body class="flex flex-direction-column">
+  <nav></nav>
+  <div class="banner">
+    <img src="/images/armd_banner.jpg">
+  </div>
+  <div class="banner">
+    <img src="/images/waves/blue_waves_bottom.jpg">
+    <div class="txt">
+      <h1>Genius Lyrics</h1>
+      <p>Without the Genius</p>
+    </div>
+  </div>
+  <div class="banner" style="padding-top:44.53125%;background-color:#45a4e8">
+    <div class="txt">
+      <h1 style="color:#fff">First Song</h1>
+      <p style="color:#fff">Coming Soon</p>
+    </div>
+  </div>
+  <div class="banner">
+    <img src="/images/waves/blue_waves_top.jpg">
+    <div class="social-media-container">
+      <div class="social-media-card">
+        <img src="/images/socials/soundcloud.png">
+        <h1>Soundcloud</h1>
+        <hr>
+        <p>Where we put our music.</p>
+        <a href="https://soundcloud.com/user-330378554" target="_blank">Go!</a>
+      </div>
+      <div class="social-media-card">
+        <img src="/images/socials/twitter.png">
+        <h1>Twitter</h1>
+        <hr>
+        <p>Where we have the socials of the medias.</p>
+        <a href="https://twitter.com/ArmdMusic" target="_blank">Go!</a>
+      </div>
+    </div>
+  </div>
+</body>
